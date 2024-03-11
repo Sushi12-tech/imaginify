@@ -23,7 +23,7 @@ export const handleError = (error: unknown) => {
   } else {
     // This is an unknown type of error
     console.error(error);
-    throw new Error(`Unknown error: ${JSON.stringify(error)}`);
+    //throw new Error(`Unknown error: ${JSON.stringify(error)}`);
   }
 };
 
