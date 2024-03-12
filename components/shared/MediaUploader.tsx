@@ -8,7 +8,7 @@ import Image from "next/image";
 
 type MediaUploaderProps = {
   onValueChange: (value: string) => void;
-  setImage: React.Dispatch<any>;
+  setImage: React.Dispatch<any>; //type of react states
   publicId: string;
   image: any;
   type: string;
@@ -32,7 +32,7 @@ const MediaUploader = ({
       secureURL: result?.info?.secure_url
     }))
 
-    onValueChange(result?.info?.public_id)
+    onValueChange(result?.info?.public_id) //the form had been changed and updated the public_id
 
     toast({
       title: 'Image uploaded successfully',
@@ -53,9 +53,9 @@ const MediaUploader = ({
 
   return (
     <CldUploadWidget
-      uploadPreset="jsm_imaginify"
+      uploadPreset="ss_imaginify"
       options={{
-        multiple: false,
+        multiple: false, //one image to upload
         resourceType: "image",
       }}
       onSuccess={onUploadSuccessHandler}
